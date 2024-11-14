@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stonks Health - Accueil</title>
+    <style>
+      /* Couleur principale : vert pharmacie */
+      :root {
+        --pharmacy-green: #4caf50;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .logo {
+        width: 100px;
+        height: auto;
+      }
+
+      .title {
+        color: var(--pharmacy-green);
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        width: 80%;
+        max-width: 500px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+        color: var(--pharmacy-green);
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: var(--pharmacy-green);
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header avec le logo et le nom du projet -->
+    <div class="header">
+      <img src="logo.png" alt="Stonks Health Logo" class="logo" />
+      <div class="title">Stonks Health</div>
+    </div>
+
+    <!-- Formulaire de saisie des données de santé -->
+    <div class="container">
+      <h2>Suivi de la santé</h2>
+
+      <!-- Champs pour les données de santé -->
+      <div class="form-group">
+        <label for="weight">Poids (kg)</label>
+        <input type="number" id="weight" placeholder="Ex : 70" />
+      </div>
+
+      <div class="form-group">
+        <label for="bloodPressure">Pression artérielle (mmHg)</label>
+        <input type="text" id="bloodPressure" placeholder="Ex : 120/80" />
+      </div>
+
+      <div class="form-group">
+        <label for="heartRate">Fréquence cardiaque (bpm)</label>
+        <input type="number" id="heartRate" placeholder="Ex : 72" />
+      </div>
+
+      <!-- Bouton d'envoi -->
+      <button class="submit-btn" onclick="saveHealthData()">
+        Enregistrer les données
+      </button>
+    </div>
+
+    <script>
+      // Fonction pour sauvegarder les données de santé (exemple simple)
+      function saveHealthData() {
+        const weight = document.getElementById("weight").value;
+        const bloodPressure = document.getElementById("bloodPressure").value;
+        const heartRate = document.getElementById("heartRate").value;
+
+        if (weight && bloodPressure && heartRate) {
+          alert(
+            `Données de santé enregistrées :\nPoids : ${weight} kg\nPression artérielle : ${bloodPressure}\nFréquence cardiaque : ${heartRate} bpm`
+          );
+        } else {
+          alert("Veuillez remplir tous les champs !");
+        }
+      }
+    </script>
+  </body>
+</html>

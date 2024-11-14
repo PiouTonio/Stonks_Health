@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stonks Health - Accueil</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="Aceuille.css" />
+  </head>
+  <body>
+    <!-- Menu latéral -->
+    <div class="sidebar">
+      <h2>Stonks Health</h2>
+      <div class="menu-item">Accueil</div>
+      <div class="menu-item">Tableau de bord</div>
+      <div class="menu-item">Historique</div>
+      <div class="menu-item">Rendez-vous</div>
+      <div class="menu-item">Paramètres</div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="content">
+      <div class="header">
+        <img
+          src="Logo-removebg-preview.png"
+          alt="Stonks Health Logo"
+          class="logo"
+        />
+        <div class="title">Suivi de la santé</div>
+      </div>
+
+      <div class="container">
+        <h3>Vos données de santé</h3>
+
+        <!-- Encadrés pour les données de santé (affichage seulement) -->
+        <div class="data-group">
+          <div class="data-box">
+            <label>Poids (kg)</label>
+            <p id="weight">Chargement...</p>
+          </div>
+
+          <div class="data-box">
+            <label>Pression artérielle (mmHg)</label>
+            <p id="bloodPressure">Chargement...</p>
+          </div>
+
+          <div class="data-box">
+            <label>Fréquence cardiaque (bpm)</label>
+            <p id="heartRate">Chargement...</p>
+          </div>
+
+          <div class="data-box">
+            <label>Glycémie (mg/dL)</label>
+            <p id="bloodSugar">Chargement...</p>
+          </div>
+
+          <div class="data-box">
+            <label>Cholestérol (mg/dL)</label>
+            <p id="cholesterol">Chargement...</p>
+          </div>
+
+          <div class="data-box">
+            <label>Température corporelle (°C)</label>
+            <p id="temperature">Chargement...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="Acceuille.js"></script>
+  </body>
+</html>
