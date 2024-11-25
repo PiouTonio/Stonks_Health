@@ -109,3 +109,14 @@ body {
   font-size: 1rem;
   color: #333;
 }
+.available {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.unavailable {
+  background-color: #f44336;
+  color: white;
+  cursor: not-allowed;
+}

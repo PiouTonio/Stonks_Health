@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stonks Health - Accueil</title>
+    <title>Stonks Health - Tableau de bord</title>
     <!-- Lien vers le fichier CSS -->
     <link rel="stylesheet" href="Aceuille.css" />
+    <!-- Bibliothèque pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!-- Menu latéral -->
@@ -26,48 +28,47 @@
           alt="Stonks Health Logo"
           class="logo"
         />
-        <div class="title">Suivi de la santé</div>
+        <div class="title">Tableau de bord</div>
       </div>
 
       <div class="container">
-        <h3>Vos données de santé</h3>
+        <!-- Section des données évolutives -->
+        <h3>Données médicales évolutives</h3>
+        <div class="data-group">
+          <canvas id="weightChart" class="chart"></canvas>
+          <canvas id="heightChart" class="chart"></canvas>
+        </div>
 
-        <!-- Encadrés pour les données de santé (affichage seulement) -->
+        <!-- Section des informations statiques -->
+        <h3>Informations générales</h3>
         <div class="data-group">
           <div class="data-box">
-            <label>Poids (kg)</label>
-            <p id="weight">Chargement...</p>
+            <p>
+              <strong>Groupe sanguin :</strong> <span id="bloodGroup">A+</span>
+            </p>
           </div>
-
           <div class="data-box">
-            <label>Pression artérielle (mmHg)</label>
-            <p id="bloodPressure">Chargement...</p>
+            <p><strong>Taille :</strong> <span id="height">170 cm</span></p>
           </div>
-
           <div class="data-box">
-            <label>Fréquence cardiaque (bpm)</label>
-            <p id="heartRate">Chargement...</p>
+            <p><strong>Poids :</strong> <span id="weight">70 kg</span></p>
           </div>
-
           <div class="data-box">
-            <label>Glycémie (mg/dL)</label>
-            <p id="bloodSugar">Chargement...</p>
+            <p>
+              <strong>Allergies :</strong> <span id="allergies">Aucune</span>
+            </p>
           </div>
+        </div>
 
-          <div class="data-box">
-            <label>Cholestérol (mg/dL)</label>
-            <p id="cholesterol">Chargement...</p>
-          </div>
-
-          <div class="data-box">
-            <label>Température corporelle (°C)</label>
-            <p id="temperature">Chargement...</p>
-          </div>
+        <!-- Section de l'historique médical -->
+        <h3>Historique médical</h3>
+        <div id="medicalHistory">
+          <p>Chargement de l'historique...</p>
         </div>
       </div>
     </div>
 
     <!-- Lien vers le fichier JavaScript -->
-    <script src="Acceuille.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stonks Health - Liste des rendez-vous</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="Aceuille.css" />
+    <!-- Bibliothèque pour le calendrier -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+  </head>
+  <body>
+    <!-- Menu latéral -->
+    <div class="sidebar">
+      <h2>Stonks Health</h2>
+      <a href="Page d'acceuille.html" class="menu-item">Accueil</a>
+      <a href="dashboard.html" class="menu-item">Tableau de bord</a>
+      <a href="settings.html" class="menu-item">Profil</a>
+      <a href="rdv.html" class="menu-item">Prise de rendez-vous</a>
+      <a href="calendrier.html" class="menu-item">Mes rendez-vous</a>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="content">
+      <div class="header">
+        <img
+          src="Logo-removebg-preview.png"
+          alt="Stonks Health Logo"
+          class="logo"
+        />
+        <div class="title">Liste des rendez-vous</div>
+      </div>
+
+      <div class="container">
+        <!-- Section principale -->
+        <div class="appointments-layout">
+          <!-- Calendrier -->
+          <div id="calendar"></div>
+
+          <!-- Liste des rendez-vous -->
+          <div class="appointments-list">
+            <h3>Rendez-vous à venir</h3>
+            <div id="appointmentDetails">
+              <p>Chargement des rendez-vous...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="calendrier.js"></script>
+  </body>
+</html>
